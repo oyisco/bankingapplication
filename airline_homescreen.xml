@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/registration_activity"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+    <include
+        layout="@layout/topbar_withback_logo"
+        android:id="@+id/top_bar"
+        />
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/top_bar"
+        >
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/_60sdp"
+            android:paddingTop="@dimen/_10sdp"
+            >
+        <ImageView
+            android:id="@+id/logoImg"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo_login" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txtHeader"
+            android:text="AIRLINE PAYMENT"
+            android:textColor="@color/textcolorpurple"
+            android:layout_below="@+id/logoImg"
+            android:textSize="@dimen/_20sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutBottom_v1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/rlHeader"
+            android:background="@drawable/welcome_bottom_bg"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/lnrSettings"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="AERO-BOOK ON HOLD"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_70sdp"
+                    android:gravity="center"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/textviewbottomline"
+                    android:paddingTop="@dimen/_2sdp">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:layout_centerVertical="true"
+                        android:textColorHint="#FFFFFF"
+                        android:theme="@style/themeforinuputtext"
+                        >
+                        <EditText
+                            android:id="@+id/edtRefrName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="#ffffff"
+                            android:hint="Booking Refrence"
+                            android:inputType="textPersonName"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="#ffffff"
+                            android:textColorHint="#ffffff" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/textviewbottomline"
+                    android:minHeight="@dimen/_38sdp"
+                    android:paddingTop="@dimen/_4sdp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:textColorHint="#FFFFFF"
+                        android:theme="@style/themeforinuputtext"
+                        >
+
+                        <EditText
+                            android:id="@+id/edtAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:hint="Amount (₦)"
+                            android:inputType="number"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="#ffffff"
+                            android:textColorHint="#ffffff" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/layoutBottom_v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/v3"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/txtSummary"
+                        android:layout_below="@+id/rlMain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="CARD DETAILS"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textStyle="bold"
+                        />
+                    <View
+                        android:id="@+id/viewLine"
+                        android:layout_below="@+id/txtSummary"
+                        android:layout_height="1dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/rlNmCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@drawable/textviewbottomline"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_5sdp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:theme="@style/themeforinuputtext"
+                            >
+
+                            <EditText
+                                android:id="@+id/edtNameOnCard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="#ffffff"
+                                android:hint="Name On Card"
+                                android:inputType="textPersonName"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/white"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@drawable/textviewbottomline"
+                        android:paddingTop="@dimen/_4sdp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:theme="@style/themeforinuputtext"
+                            >
+
+                            <EditText
+                                android:id="@+id/edtCardNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="#ffffff"
+                                android:hint="Card Number"
+                                android:inputType="textPersonName"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/white"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_12sdp"
+                            android:text="Expiry Date"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/textviewbottomline">
+
+                            <EditText
+                                android:id="@+id/edtMonths"
+                                android:layout_width="@dimen/_90sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@android:color/transparent"
+                                android:hint="Month"
+                                android:padding="@dimen/_6sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/textviewbottomline">
+
+                            <EditText
+                                android:id="@+id/edtYear"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Year"
+                                android:singleLine="true"
+                                android:padding="@dimen/_6sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlEmlAddrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:background="@drawable/textviewbottomline"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_5sdp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:theme="@style/themeforinuputtext"
+                            >
+
+                            <EditText
+                                android:id="@+id/edtEmailAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="#ffffff"
+                                android:hint="Email Address"
+                                android:inputType="textPersonName"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="@drawable/textviewbottomline"
+                        android:paddingTop="@dimen/_4sdp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:theme="@style/themeforinuputtext"
+                            >
+                            <EditText
+                                android:id="@+id/edtPhoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:backgroundTint="#ffffff"
+                                android:hint="Phone Number"
+                                android:inputType="textPersonName"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:id="@+id/txtEmail"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtEmailAddress1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Email Address :"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+
+                        android:layout_marginTop="@dimen/_15sdp"
+                        />
+                    <TextView
+                        android:id="@+id/txtEmailAddress"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="Email Address :"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:id="@+id/txtPhone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Phone Number:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        />
+                    <TextView
+                        android:id="@+id/txtPhoneNumber"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="Phone Number :"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/view11"
+                android:layout_height="1dp"
+                android:layout_width="1dp"
+                android:layout_below="@+id/lnrSettings"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:background="@drawable/gradientbg_purple"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:text="BACK"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_below="@+id/lnrSettings"
+                android:textSize="@dimen/_12sdp"
+                android:layout_toLeftOf="@+id/view11"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:background="@drawable/gradientbg_blue"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:text="NEXT"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_30sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:layout_below="@+id/lnrSettings"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_marginTop="@dimen/_minus55sdp"
+            android:focusable="true"
+            android:id="@+id/rlImage"
+            android:layout_below="@+id/rlHeader"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/image_bg" />
+
+
+            <ImageView
+                android:id="@+id/logoImg1"
+                android:layout_width="@dimen/_64sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sign_up_img_"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/arc_progress"
+                android:layout_width="@dimen/_64sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                custom:arc_bottom_text="LOADING"
+                custom:arc_finished_color="#6E0D98"
+                custom:arc_text_color="#6E0D98"
+                custom:arc_unfinished_color="#197BEA"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/logoImg2"
+                android:layout_width="@dimen/_64sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user_icon_profile_pic_logo"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="@dimen/_64sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/airline_ticket_icon"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+     </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

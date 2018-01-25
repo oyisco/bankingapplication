@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_with_border_corner"
+    >
+    <RelativeLayout
+        android:id="@+id/rlScroll"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_20sdp"
+        android:background="@drawable/shape_with_border_corner"
+        >
+        <RelativeLayout
+            android:id="@+id/rlMainForBg"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_with_border_corner"
+            >
+            <RelativeLayout
+                android:id="@+id/rlBank"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_width="match_parent"
+                    android:text="Bank Name :"
+                    android:gravity=""
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/txtcolorfundstransfer"
+                />
+                <View
+                    android:id="@+id/v9"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/txtBankName"
+                    android:background="@color/lightGrey"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/textviewbottomline"
+                android:layout_below="@+id/rlBank"
+                android:id="@+id/rlAcntNumber"
+                android:layout_marginTop="@dimen/_7sdp"
+                >
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_centerVertical="true"
+                    android:theme="@style/TextLabelFundsTransfer"
+                    >
+                    <EditText
+                        android:id="@+id/edtAccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:hint="Smart Card Number"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:textColorHint="@color/timAndNameClr" />
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+            <View
+                android:id="@+id/v1"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rlAcntNumber"
+                android:background="@color/lightGrey"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/textviewbottomline"
+                android:layout_below="@+id/v1"
+                android:id="@+id/rlAcntN"
+                android:layout_marginTop="@dimen/_7sdp"
+                >
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_centerVertical="true"
+                    android:theme="@style/TextLabelFundsTransfer"
+                    >
+                    <EditText
+                        android:id="@+id/edtAMppunt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:hint="Amount (N)"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:textSize="@dimen/_13sdp"
+                        android:textColorHint="#ffffff" />
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v3"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rlAcntN"
+                android:background="@color/lightGrey"
+                />
+
+            <LinearLayout
+                android:id="@+id/layoutBottom_v3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/v3"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/rlNmCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:background="@drawable/textviewbottomline"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_5sdp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:theme="@style/TextLabelFundsTransfer"
+                        >
+
+                        <EditText
+                            android:id="@+id/edtNameOnCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="#ffffff"
+                            android:hint="Name On Card"
+                            android:inputType="textPersonName"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/txtcolorfundstransfer"
+                            android:textColorHint="@color/txtcolorfundstransfer" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/lightGrey"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/textviewbottomline"
+                    android:paddingTop="@dimen/_4sdp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:theme="@style/TextLabelFundsTransfer"
+                        >
+
+                        <EditText
+                            android:id="@+id/edtCardNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="#ffffff"
+                            android:hint="Card Number"
+                            android:inputType="textPersonName"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/txtcolorfundstransfer"
+                            android:textColorHint="#ffffff" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/rlNmCard"
+                    android:background="@color/lightGrey"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:text="Expiry Date"
+                        android:textColor="@color/txtcolorfundstransfer"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/textviewbottomline">
+
+                        <EditText
+                            android:id="@+id/edtMonths"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@android:color/transparent"
+                            android:hint="Month"
+                            android:padding="@dimen/_6sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/txtcolorfundstransfer"
+                            android:textColorHint="@color/txtcolorfundstransfer" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/textviewbottomline">
+
+                        <EditText
+                            android:id="@+id/edtYear"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="Year"
+                            android:singleLine="true"
+                            android:padding="@dimen/_6sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/txtcolorfundstransfer"
+                            android:textColorHint="@color/txtcolorfundstransfer" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <View
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/lightGrey"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textviewbottomline">
+
+                        <ImageView
+                            android:id="@+id/imgViewPssCvv"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_toLeftOf="@+id/imgCVVMark"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/show" />
+
+                        <ImageView
+                            android:id="@+id/imgCVVMark"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/question_mark_" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/imgViewPssCvv"
+                            android:theme="@style/TextLabelFundsTransfer">
+
+                            <EditText
+                                android:id="@+id/edtCVV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@android:color/transparent"
+                                android:hint="Cvv"
+                                android:textSize="@dimen/_13sdp"
+                                android:inputType="numberPassword"
+                                android:maxLength="3"
+                                android:paddingBottom="@dimen/_8sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/txtcolorfundstransfer"
+                                android:textColorHint="@color/txtcolorfundstransfer" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textviewbottomline"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/imgViewPssPin"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_toLeftOf="@+id/imgPINMark"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/show" />
+
+                        <ImageView
+                            android:id="@+id/imgPINMark"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"
+                            android:src="@drawable/question_mark_" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_toLeftOf="@+id/imgViewPssPin"
+                        >
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:theme="@style/TextLabelFundsTransfer"
+
+                            >
+
+                            <EditText
+                                android:id="@+id/edtPin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@android:color/transparent"
+                                android:hint="Pin"
+                                android:inputType="numberPassword"
+                                android:maxLength="4"
+                                android:paddingBottom="@dimen/_8sdp"
+                                android:textSize="@dimen/_13sdp"
+                                android:paddingTop="@dimen/_4sdp"
+                                android:textColor="@color/txtcolorfundstransfer"
+                                android:textColorHint="@color/txtcolorfundstransfer" />
+                        </android.support.design.widget.TextInputLayout>
+                    </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/v8"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/layoutBottom_v3"
+                android:background="@color/lightGrey"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/textviewbottomline"
+                android:layout_below="@+id/v8"
+                android:id="@+id/rlPhoneNumber"
+                android:layout_marginTop="@dimen/_7sdp"
+                >
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_centerVertical="true"
+                    android:theme="@style/TextLabelFundsTransfer"
+                    >
+                    <EditText
+                        android:id="@+id/edtPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:hint="Phone Number (optional)"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:visibility="visible"
+                        android:textColorHint="#ffffff" />
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+            <View
+                android:id="@+id/v4"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rlPhoneNumber"
+                android:background="@color/lightGrey"
+                />
+            <RelativeLayout
+                android:id="@+id/rlTransferTye"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/v4"
+                android:layout_margin="@dimen/_10sdp"
+                >
+                <ImageView
+                    android:id="@+id/btnCheck"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:background="@drawable/uncheck_"
+                    />
+                <TextView
+                    android:id="@+id/txtAutomaticTrnsfr"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Automatic Transfer"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/btnCheck"
+                    android:textColor="@color/txtcolorfundstransfer"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textSize="@dimen/_13sdp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rlShowHideOptions"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rlMainForBg"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone"
+            >
+            <!--<RelativeLayout
+                android:id="@+id/rldaily"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="25%"
+                >-->
+            <ImageView
+                android:id="@+id/imgDaily"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/radio"
+                android:layout_marginTop="@dimen/_2sdp"
+                />
+            <TextView
+                android:id="@+id/txtDaily"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="14%"
+                android:layout_toRightOf="@+id/imgDaily"
+                android:text="Daily"
+                app:layout_marginLeftPercent="1%"
+                android:layout_marginTop="@dimen/_1sdp"
+                />
+            <!-- </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/rlMonthly"
+                 android:layout_height="wrap_content"
+                 app:layout_widthPercent="25%"
+                 android:layout_toRightOf="@+id/rldaily"
+                 >-->
+            <ImageView
+                android:id="@+id/imgWeekly"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/txtDaily"
+                android:src="@drawable/radio"
+                app:layout_marginLeftPercent="1%"
+                android:layout_marginTop="@dimen/_2sdp"
+
+                />
+            <TextView
+                android:id="@+id/txtWeekly"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="16%"
+                android:layout_toRightOf="@+id/imgWeekly"
+                android:text="Weekly"
+                app:layout_marginLeftPercent="1%"
+                android:layout_marginTop="@dimen/_1sdp"
+
+                />
+            <!-- </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/rlWeekly"
+                 android:layout_height="wrap_content"
+                 app:layout_widthPercent="25%"
+                 android:layout_toRightOf="@+id/rlMonthly"
+                 >-->
+            <ImageView
+                android:id="@+id/imgMonthly"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/txtWeekly"
+                android:src="@drawable/radio"
+                app:layout_marginLeftPercent="1%"
+                android:layout_marginTop="@dimen/_2sdp"
+
+                />
+            <TextView
+                android:id="@+id/txtMonthly"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="18%"
+                android:layout_toRightOf="@+id/imgMonthly"
+                android:text="Monthly"
+                app:layout_marginLeftPercent="1%"
+                android:layout_marginTop="@dimen/_1sdp"
+
+                />
+            <!-- </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/rlSelect"
+                 android:layout_height="wrap_content"
+                 app:layout_widthPercent="25%"
+                 android:layout_toRightOf="@+id/rlWeekly"
+                 >-->
+            <ImageView
+                android:id="@+id/imgSelect"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/txtMonthly"
+                android:src="@drawable/radio"
+                app:layout_marginLeftPercent="1%"
+                android:layout_marginTop="@dimen/_2sdp"
+
+                />
+            <TextView
+                android:id="@+id/txtSelect"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="14%"
+                android:layout_toRightOf="@+id/imgSelect"
+                android:text="Select"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+
+                />
+            <!--</RelativeLayout>-->
+        </android.support.percent.PercentRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rllmm"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rlShowHideOptions"
+            android:visibility="gone"
+            android:background="@drawable/shape_days"
+            android:paddingLeft="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            >
+            <TextView
+                android:id="@+id/edtMonth"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_50sdp"
+                android:hint="Month"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@color/txtcolorfundstransfer"
+                android:layout_toLeftOf="@+id/edtMonth"
+                android:id="@+id/view"
+                android:layout_marginRight="@dimen/_5sdp"
+                />
+            <TextView
+                android:id="@+id/edtDay"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_50sdp"
+                android:hint="Day"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/view"
+                android:layout_marginLeft="@dimen/_2sdp"
+                />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view11"
+            android:layout_height="1dp"
+            android:layout_width="1dp"
+            android:layout_below="@+id/rllmm"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/gradientbg_purple"
+            android:text="BACK"
+            android:textColor="@color/white"
+            android:layout_below="@+id/rllmm"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toLeftOf="@+id/view11"
+            android:layout_marginLeft="@dimen/_20sdp"
+            />
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/gradientbg_blue"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:layout_below="@+id/rllmm"
+            android:paddingLeft="@dimen/_30sdp"
+            android:paddingRight="@dimen/_30sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/view11"
+            />
+
+
+    </RelativeLayout>
+</ScrollView>

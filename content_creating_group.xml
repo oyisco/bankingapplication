@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_creating_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.leadconceptsolution.securipay.CreatingGroupActivity"
+
+   >
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_bar_create_group" />
+<RelativeLayout
+    android:id="@+id/rlGroupDesc"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/top_bar"
+    android:background="@color/purpleappcolor"
+    >
+    <ImageView
+        android:id="@+id/imgGroupPicture"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/gray_bg"
+        android:visibility="gone"
+        />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:textColorHint="@color/white"
+        android:id="@+id/edtGrpName"
+        android:theme="@style/TextLabel"
+        android:layout_toRightOf="@+id/imgGroupPicture"
+        android:layout_centerVertical="true"
+        >
+
+        <EditText
+            android:id="@+id/edtGroupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:hint="Enter Group Name"
+            android:padding="@dimen/_10sdp"
+            android:inputType="textWebEmailAddress"
+            android:textColor="#ffffff"
+            android:imeOptions="actionDone"
+            android:textColorHint="@color/white" />
+    </android.support.design.widget.TextInputLayout>
+</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rclViewChatting"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlChatingLy"
+        android:background="@color/white"
+        android:layout_below="@+id/rlGroupDesc"
+        />
+</RelativeLayout>

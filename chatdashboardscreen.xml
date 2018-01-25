@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:background="@color/servicesbgwhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+
+    android:id="@+id/home_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+   >
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_bar_chat" />
+
+    <LinearLayout
+        android:id="@+id/lnrHeaderChatType"
+        android:layout_below="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:background="@color/color_chat_topbar"
+        android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/calls" />
+
+                <ImageView
+                    android:id="@+id/imgOne2OneChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/chat" />
+
+              <ImageView
+                  android:id="@+id/imgGroupChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/group_chat" />
+            <ImageView
+                android:id="@+id/imgContacts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/contacts" />
+           <!-- <ImageView
+                android:id="@+id/imgContacts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/contacts"/>-->
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlchatsWithView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnrHeaderChatType"
+        android:background="@color/color_chat_usersbg"
+        android:visibility="gone"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rclChattiedWith"
+            android:scrollbars="vertical"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_below="@+id/rlchatsWithView"
+        android:id="@+id/fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lnrBottomChatAndWallet"
+        android:background="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:id="@+id/lnrBottomChatAndWallet"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_weight="1"
+            android:id="@+id/mRelWalllet"
+            android:background="@drawable/wallet_back">
+
+            <ImageView
+                android:id="@+id/walletImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_36sdp"
+                android:src="@drawable/wallet_icon" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:layout_marginStart="21dp"
+                android:layout_toEndOf="@+id/walletImg"
+                android:layout_toRightOf="@+id/walletImg"
+                android:text="WALLET"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_weight="1"
+            android:id="@+id/rlChat"
+            android:background="@drawable/chat_back">
+
+            <ImageView
+                android:id="@+id/chatImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_36sdp"
+                android:src="@drawable/chat_icon" />
+
+            <TextView
+                android:id="@+id/btnChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_toRightOf="@id/chatImg"
+                android:text="CHAT"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:itemIconTint="@android:color/holo_red_light"
+        app:itemTextColor="@android:color/holo_red_light"
+        app:menu="@menu/navigation_view_menu_items">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

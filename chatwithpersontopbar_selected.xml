@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_70sdp"
+    android:layout_height="@dimen/_75sdp"
+    android:id="@+id/rlMain"
+    >
+    <RelativeLayout
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:id="@+id/rlMain1"
+        >
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/relativeLayout">
+            <ImageView
+                android:id="@+id/imgUserForChat"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_width="@dimen/_48sdp"
+                >
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/imgUserForChat"
+                android:layout_alignRight="@+id/imgUserForChat"
+                android:layout_below="@+id/imgUserForChat"
+                android:text="Ali Abbas"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7sdp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+            <ImageView
+                android:layout_height="@dimen/_10sdp"
+                android:layout_width="@dimen/_10sdp"
+                android:src="@drawable/triangle_for_selector"
+                android:layout_below="@+id/txtUserName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_minus1sdp"
+                android:id="@+id/imgBotomarrow"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlMainChatWith"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            >
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/online"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:layout_marginRight="@dimen/_21sdp"
+        android:id="@+id/imgisOnline" />
+</RelativeLayout>

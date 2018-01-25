@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+                android:id="@+id/rllmm"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_alignParentRight="true"
+                >
+                    <EditText
+                        android:id="@+id/edtMonth"
+                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/_50sdp"
+                        android:hint="Month"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        />
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@color/txtcolorfundstransfer"
+                        android:layout_toLeftOf="@+id/edtMonth"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/view"
+                        />
+                    <EditText
+                        android:id="@+id/edtDay"
+                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/_50sdp"
+                        android:hint="Day"
+                        android:gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/view"
+                        />
+                </RelativeLayout>
+</RelativeLayout>

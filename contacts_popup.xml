@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77000000"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlMainn"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+        <RelativeLayout
+            android:id="@+id/rlMain1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_with_corner_popqr"
+            android:paddingBottom="20dp"
+            android:layout_margin="@dimen/_9sdp"
+            >
+            <RelativeLayout
+                android:id="@+id/rldetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+
+                android:background="@color/bluecolorforname"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/txtDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select a Contact"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentLeft="true"
+                     />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlGenerateQrCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rldetail"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rclChattiedWith"
+                    android:scrollbars="vertical"
+                    android:layout_below="@+id/rlSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+

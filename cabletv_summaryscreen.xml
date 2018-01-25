@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/welcome_bottom_bg"
+    android:id="@+id/rlHome"
+    >
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/topbar_withback_logo"
+        />
+    <ScrollView
+        android:id="@+id/scrl"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/topBar"
+        >
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rlMain"
+                >
+                    <RelativeLayout
+                        android:id="@+id/rlFunds"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        >
+                    <ImageView
+                        android:id="@+id/mImgFund"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/gray_bg"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/cable_tv_icon"
+                        android:id="@+id/imgLogo"
+                        />
+                    </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/rlFunds"
+                    android:textColor="@color/white"
+                    android:text="Sport Betting"
+                    android:id="@+id/txtTitle"
+                    android:textSize="@dimen/_14sdp" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/txtSummary"
+                android:layout_below="@+id/rlMain"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="SUMMARY"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/view"
+                android:layout_below="@+id/txtSummary"
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                />
+            <TextView
+                android:id="@+id/txtInternetPackage"
+                android:layout_below="@+id/view"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Sport Betting : "
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtbettingType"
+                android:layout_below="@+id/txtInternetPackage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Sport Betting : "
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+
+                />
+            <TextView
+                android:id="@+id/txtBokingRef"
+                android:layout_below="@+id/txtbettingType"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Booking Refrence"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+
+                />
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_below="@+id/txtBokingRef"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Amount (#)"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+
+                />
+            <TextView
+                android:id="@+id/txtEmailAddress"
+                android:layout_below="@+id/txtAmount"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Email : "
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+
+                />
+            <TextView
+                android:id="@+id/txtPhoneNumber"
+                android:layout_below="@+id/txtEmailAddress"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Phone Number"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:id="@+id/txtPayment"
+                android:layout_below="@+id/txtPhoneNumber"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="PAYMENT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/view1"
+                android:layout_below="@+id/txtPayment"
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:id="@+id/txtCVV"
+                android:layout_below="@+id/view1"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="CVV"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                />
+            <View
+                android:id="@+id/view2"
+                android:layout_below="@+id/txtCVV"
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignRight="@+id/txtCVV"
+                />
+            <TextView
+                android:id="@+id/txtPIN"
+                android:layout_below="@+id/view2"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="PIN"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                />
+            <View
+                android:id="@+id/view3"
+                android:layout_below="@+id/txtPIN"
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignRight="@+id/txtPIN"
+                />
+
+            <TextView
+                android:id="@+id/txtFee"
+                android:layout_below="@+id/view3"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Convenience Fee : # 100"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                />
+            <TextView
+                android:id="@+id/btnTransfer"
+                android:layout_below="@+id/txtFee"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="PAY"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/gradientbg_blue"
+                android:paddingLeft="@dimen/_25sdp"
+                android:paddingRight="@dimen/_25sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+</ScrollView>
+</RelativeLayout>
